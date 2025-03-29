@@ -87,6 +87,8 @@ study = 'data analysis'
     ii. tuple tuple() () e.g (1, 2, 3), ('a', 'b', 'c')
     iii. Range range() e.g range(1, 10)
 4. boolean bool(); True , False
+5. Mapping type: dict(), {key:value} e.g {"name": "Damilare", "age": 30}
+6. Set Type: set(), {} e.g {12, 44, 45}
 '''
 
 # number = 12.6 + 2j
@@ -108,3 +110,165 @@ study = 'data analysis'
 2. Read up on Conditional statement
 3. Build a simple caculator
 '''
+
+# student = {
+#     "name": "Damilare",
+#     "age": 30,
+#     "course": 'Data science'
+# }
+# # print(type(student))
+# print(student['name'])
+
+# numbers = {2, 4, 5, 2, 3, 6, 1}
+# print(type(numbers))
+# print(numbers)
+
+# students = {'Femi', 'Ade', 'Ola', 'Ojo'}
+# print(students)
+
+
+# Python Operators
+
+'''
+1. Arithmetic Operators: +, -, *, /, //, %, **
+2. Assignment Operators: =, +=, -=, *=, /=, %=, **=
+3. Comparison Operators: ==, !=, >, <, >=, <=
+4. Logical Operator: and, or, not
+5. Identity Operator: is, is not
+6. Membership Operator: in, not in
+7. Bitwise Operator: &, |, ^, ~, <<, >>
+    & => and
+    | => or
+    ^ => xor
+    ~ => not
+    << => left shift
+    >> => right shift
+'''
+
+# x = 10
+# print(type(bin(x)))
+
+# 10 => 1010
+# 5 =>   100
+
+print(f'5 => {bin(5)}')
+print(f'10 => {bin(10)}')
+
+
+# print(bin(10 ^ 5))
+
+print(bin(5 >> 1))
+
+
+# print(5 // 2) # 2
+# print(5 % 2) # 1 (remainder)
+
+# x = 5
+# x -= 1 # x = x + 1
+# print(x)
+
+# print(x >= 5)
+
+"""
+    AND Operator
+A ----- B ----- C
+0 ----- 0 ----- 0
+0 ----- 1 ----- 0
+1 ----- 0 ----- 0
+1 ----- 1 ----- 1
+
+    OR Operator
+A ----- B ----- C ---- A XOR(^) B
+0 ----- 0 ----- 0 ----- 0
+0 ----- 1 ----- 1 ----- 1
+1 ----- 0 ----- 1 ----- 1
+1 ----- 1 ----- 1 ----- 0
+
+ NOT Operator
+ A ----- not A 
+ 0 ----- 1
+ 1 ----- 0
+"""
+
+# Python if else statement
+
+# x = 5
+
+# if x == 5 or x > 5:
+#     print('x is equal to or greater than 5')
+# else:
+#     print('x is less than 10')
+
+
+# number = int(input('Number: '))
+# if number % 2 == 0:
+#     print(f'{number} is even')
+# else:
+#     print(f'{number} is odd')
+
+# beans = True
+# rice = False
+# bread = False
+
+# if beans and rice:
+#     print('I will buy beans and rice')
+    
+# elif beans:
+#     if bread:
+#         print('I will buy beans and bread')
+#     else:
+#         print('I dont eat my beans without bread. Thank you')
+
+# elif rice:
+#     print('I will buy rice')
+    
+# else:
+#     print('I am not interested')
+
+
+# print('My Calculator....')
+
+# value1 = float(input('First value: '))
+# value2 = float(input('Second value: '))
+# print("""
+#     1. Addition
+#     2. Subtraction
+#     3. Multiplication
+#     #. Exit
+# """)
+# choice =  input('Choice: ')
+# if choice == '1':
+#     res = value1 + value2
+#     print(f'{value1} + {value2} = {res}')
+
+# elif choice == '2':
+#     res = value1 - value2
+#     print(f'{value1} - {value2} = {res}')
+
+# elif choice == '3':
+#     res = value1 * value2
+#     print(f'{value1} x {value2} = {res}')
+    
+# elif choice == '#':
+#     print('Thank you')
+#     exit()
+# else:
+#     print('Invalid choice')
+    
+    
+
+# print('I am still running')
+
+# Assignment 
+# 1. Build a simple ussd application
+
+
+
+x = 5
+y = 5
+# print(x is not y)
+
+
+# fruits = ['Apple', 'Orange', 'Mango']
+
+# print('Apple' not in fruits)
