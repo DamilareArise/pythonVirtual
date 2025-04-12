@@ -151,13 +151,13 @@ study = 'data analysis'
 # 10 => 1010
 # 5 =>   100
 
-print(f'5 => {bin(5)}')
-print(f'10 => {bin(10)}')
+# print(f'5 => {bin(5)}')
+# print(f'10 => {bin(10)}')
 
 
 # print(bin(10 ^ 5))
 
-print(bin(5 >> 1))
+# print(bin(5 >> 1))
 
 
 # print(5 // 2) # 2
@@ -272,3 +272,219 @@ y = 5
 # fruits = ['Apple', 'Orange', 'Mango']
 
 # print('Apple' not in fruits)
+
+
+
+# PYTHON STRINGS
+text = "I am happy to be here.!" # ['I', ' ', 'a', 'm', ' '... ]
+# name = '<h1>Damilare</h1>'
+
+# print(type(text))
+
+# print(text[-3])
+
+# slicing
+# print(text[0:5])
+# print(text[5:10])
+
+# print(len(text))
+
+# print(ord('i'))
+# print(chr(73))
+
+# print(text.lower())
+# print(text.upper())
+# print(text.capitalize())
+# print(text.title())
+
+# print(text.strip())
+# print(name.lstrip('</h1>'))
+# print(name.rstrip('</h1>'))
+
+# print(text.startswith('I'))
+# print(text.endswith('.!'))
+
+# print(text.find('Happy'))
+
+# email verification
+# email = input('Email: ')
+# if email.find('@') != -1 and email.find('.') != -1 and email[0].isalpha() and email[-1].isalpha():
+#     print('Valid Email')
+# else:
+#     print('Invalid Email')
+    
+# print(text.split('to'))
+
+# splited = ['I', 'am', 'happy', 'to', 'be', 'here.!']
+# joined = ' '.join(splited)
+# print(joined)
+
+
+# address = 'No 23|Ajala Estate|Abeokuta|Ogun State|Nigeria'
+# splited = address.split('|')
+# # print(splited[3])
+# address = {
+#     "house_no": splited[0],
+#     'street': splited[1],
+#     'city': splited[2],
+#     'state': splited[3],
+#     'country': splited[4],
+# }
+# print(address['house_no'])
+
+# ussd = input('ussd: ')
+# if ussd.strip() == '*312#':
+#     print('''
+#         1. Buy Data
+#         2. Data Balance  
+#     ''')
+# else:
+#     print('Invalid USSD Code')
+
+# Assignment 
+# Develop a simple Quiz App that asks the user a series of questions and keeps track of the score.
+# Develop a palindrome checker
+
+
+# ques = input('Is Nigeria a country? (yes/no): ').strip().upper()
+# if ques == 'YES':
+#     print('Correct')
+# else:
+#     print('wrong')
+
+
+# drt = r'C:\\python_work\next'
+# print(drt)
+# r -> rawstring 
+# \ -> escape chr 
+# \n -> new line
+# \t  ->  tab
+# print('it\'s')
+# print('How are you?\\t\\tFine')
+# print(r'How are you?\t\tFine')
+
+
+# python collections/array 
+# 1. list 
+# 2. tuple
+# 3. dict
+# 4. set
+
+# 1. list: A list is ordered, mutable/changeable, indexable, and it allows duplicate values
+# myList = ['Tosin', 'Olumide', 'Peace', True, 12, 45.3, None, 'Peace']
+# print(type(myList))
+# print(len(myList))
+
+# print(myList[0])
+# print(myList[-1])
+
+# print(myList[1:4])
+# myList[-2] = 'Damilare'
+# print(myList)
+
+# myList.append('Jacob')
+# myList.extend(['Jacob', 'Mary'])
+# myList.insert(3, 'Victor')
+# myList.pop(2)
+# myList.remove('olumide')
+# myList.reverse()
+# print(myList.index('Olumide'))
+# print(myList)
+
+numbers = [3, 5, 7, 8, 6, 1, 2]
+# numbers.sort(reverse=True)
+# print(numbers)
+
+# alp = ['ade', 'Lola', 'Cephas', 'Kola']
+# alp.sort(key=str.lower)
+# print(alp)
+
+# print(sum(numbers))
+# print(min(numbers))
+# print(max(numbers))
+
+# 2. tuple: indexed, ordered, allows duplicate value, but it is immutable/unchangeable
+myTuple = ('Ade', 'Kola', 'Lola', 'Cephas', 'Kola')
+# print(myTuple)
+# print(myTuple[0:2])
+
+# myTuple[3] = 'Segun'
+# li = list(myTuple)
+# li[3] = 'Segun'
+# myTuple = tuple(li)
+# print(myTuple)
+
+# unpacking
+# (*li,) = myTuple
+# print(li)
+# x, y, *z = myTuple
+# z, *x, y = myTuple
+# print(z)
+
+# print(myTuple.count('Kola'))
+# print(myTuple.index('Kola', 2))
+
+# print(sorted(myTuple))
+
+# 3. set: unordered, unindexed, no duplicate value, unchangeable
+mySet = {'Ade', 'Kola', 'Lola', 'Cephas', 'Kola'}
+# print(mySet)
+# mySet[0] = 'Damilare'
+
+# mySet.add('Damilare')
+# mySet.update(['Damilare', 'Segun'])
+# mySet.remove('Ade') # remove() method will raise a KeyError if the item is not found
+# mySet.discard('ade') # discard() method will not raise a KeyError if the item is not found
+# print(mySet)
+
+setA = {4,2,1,3,5,9,6,7,8}
+setB = {3,4,6,11,12}
+setC = {1, 3, 5}
+
+# print(setA.union(setB))
+# print(setA.intersection(setB))
+# print(setA.difference(setB)) # setA - setB
+# print(setA.symmetric_difference(setB))
+
+# setA.intersection_update(setB)
+# print(setA)
+
+# print(setA.issuperset(setC))
+# print(setA.issubset(setB))
+# print(setA.isdisjoint(setB))
+
+
+# 4. Dictionary: 
+# myDreamCar = {
+#     'brand': 'Lambo',
+#     'model': 'Aventador',
+#     'color': 'Red',
+#     'year': 2025,
+#     'owner':{
+#         'name': 'Mr Olumide',
+#         'address': {
+#             'street': 'Olumide Street',
+#             'city': 'Ikeja',
+#             'state': 'Lagos',
+#             'country': 'Nigeria'
+#         }
+#     }
+# }
+
+# print(myDreamCar['owner']['address']['country'])
+
+person = {
+    'name':'Ojo Ade',
+    'age': 23
+}
+
+# print(person.keys())
+# print(person.values())
+# print(person.items())
+
+# print(person['age'])
+# print(person.get('ages', 'Not Found'))
+# person['marital status'] = 'Single'
+# person.update({'marital status': 'Single', 'country': 'Nigeria'})
+# person.popitem()
+print(person)
