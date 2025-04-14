@@ -487,4 +487,99 @@ person = {
 # person['marital status'] = 'Single'
 # person.update({'marital status': 'Single', 'country': 'Nigeria'})
 # person.popitem()
-print(person)
+# print(person)
+
+# PYTHON LOOPS
+# 1. For loop 
+# 2. While Loop
+
+# sequence => string, list, tuple, set, dictionary
+
+# name = 'Damilare' 
+# for letter in name:
+    
+#     print(letter)
+#     print('_________')
+
+# names = ['Olumide', 'Peace', 'Tosin']
+# for name in names:
+#     print(f'Welcome {name}')
+
+
+# score = 0
+# quest1 = '1. What is the capital of Nigeria?\na.) Abuja b.) Lagos '
+# print(quest1)
+# answer = input('Enter your answer: ')
+# if answer.strip().lower() == 'a':
+#     print('Correct')
+#     score += 1
+# else:
+#     print('Incorrect')
+    
+# quest2  = '2. What is the capital of Lagos?\na.) Ikeja b.) Lekki '
+# print(quest2)
+# answer = input('Enter your answer: ')
+# if answer.strip().lower() == 'a':
+#     print('Correct')
+#     score += 1
+# else:
+#     print('Incorrect')
+    
+# print(f'Your total score is {score}')
+
+
+# Using the Zip class 
+
+# score = 0
+# questions = [
+#     '1. What is the capital of Nigeria?\na.) Abuja b.) Lagos',
+#     '2. What is the capital of Lagos?\na.) Lekki  b.)Ikeja  '
+# ]
+
+# anwers = ['a', 'b']
+# answer_mark = [10, 5]
+
+# for ques, ans, mark in zip(questions, anwers, answer_mark) :
+#     print(ques)
+#     answer = input('Enter your answer: ')
+#     if answer.strip().lower() == ans:
+#         print('Correct')
+#         score += mark
+#     else:
+#         print('Incorrect')
+        
+# print(f'Your total score is {score}')
+
+
+# Using List of tuples
+
+# ques_ans_mark = [
+#     ('1. What is the capital of Nigeria?\na.) Abuja b.) Lagos', 'a', 10),
+#     ('2. What is the capital of Lagos?\na.) Lekki  b.) Ikeja', 'b', 5) 
+# ]
+
+# for ques, ans, mark in ques_ans_mark:
+#     print(mark)
+
+# using Dictionary
+# ans_ques = {
+#     'a': '1. What is the capital of Nigeria?\na.) Abuja b.) Lagos',
+#     'b': '2. What is the capital of Lagos?\na.) Lekki b.) Ikeja '
+# }
+# for ans, ques in ans_ques.items():
+#     print(ques)
+
+# Assignment
+'''
+1. Ask the user/admin/principal how students is taking the test and register them.
+2. Call the students one after the other to take the test,
+3. Print out the students and their score
+4. Print out the student with the highest and lowest score
+5. Print out the avarage score of the students
+
+'''
+
+for x in range(1, 6):
+    print(f'{x} Times Table')
+    for y in range(1, 6):
+        print(f'{x} x {y} = {x * y}')
