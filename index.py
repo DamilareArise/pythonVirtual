@@ -579,7 +579,246 @@ person = {
 
 '''
 
-for x in range(1, 6):
-    print(f'{x} Times Table')
-    for y in range(1, 6):
-        print(f'{x} x {y} = {x * y}')
+# for x in range(1, 6):
+#     print(f'{x} Times Table')
+#     for y in range(1, 6):
+#         print(f'{x} x {y} = {x * y}')
+
+
+# API
+# WHILE LOOP
+# FUNCTIONS
+# OOP
+
+
+# API -> Application progromming interface
+
+# [
+#     {
+#     "name": "John Doe",
+#     "class": "JSS 1",
+#     },
+#     {   
+#      "name": "Jane Doe",
+#      "class": "JSS 2",
+#     }
+# ]
+
+# WHILE LOOP
+# x = 10
+# while x > 0:
+#     print(x)
+#     x -= 1
+    
+# x = 0
+# while x < 10:
+#     print(x)
+#     x +=1
+
+# user = input('USSD: ')
+# while user != '*312#':
+#     print('Invalid USSD code')
+#     user = input('USSD: ')
+
+# else:
+#     print('Welcome....')
+
+# slot = 3
+# students = []
+# while slot > 0:
+#     info = {
+#         "name": input('Name: '),
+#         "email": input('Email: ')
+#     }
+#     students.append(info)
+#     slot -= 1
+
+# print(students)
+
+
+
+# tickets = 10
+# while tickets > 0:
+#     age = int(input('Age: '))
+    
+#     if tickets == 3:
+#         break
+    
+#     elif age >= 18:
+#         print('You are old enough')
+    
+#     else:
+#         print('You are too young')
+#         continue
+    
+#     tickets -= 1
+#     print(f'Tickets remaining: {tickets}')  
+    
+# print('Sold out', tickets)
+
+
+# while True:
+#     user = input('press enter to continue or 1 to exit')
+#     if user == '1':
+#         break
+
+
+# Python Function
+
+'''
+Stages of function creation in python
+1. function declaration
+2. function definition
+3 function invocation
+
+function categories
+1. parametized func
+2. non parametized func
+
+'''
+
+def greet():
+    print('Hello')
+    
+# greet()
+
+# def greet(name):
+#     print(f'Hello {name}')
+
+# greet(name='Damilare')
+
+
+def greet(name:str|None, status:bool =False) -> str:
+    '''
+    This is a function that greets the user with a name and status
+    '''
+    if status:
+        print(f'Hello {name}, you are verified✅')
+    else:
+        print(f'Hello {name}, you are not verified❌')
+        
+
+# greet('Damilare', True)
+
+
+def evaluate(num:int):
+    return num * 10 ** 2
+
+# print(evaluate(2))
+
+def calc():
+    num1 = int(input('Enter first number: '))
+    num2 = int(input('Enter second number: '))
+    res = num1 + num2 
+    print(evaluate(res))
+
+# calc()
+
+
+# recurssive function
+
+
+def home():
+    print('Welcome to home page')
+    user = input('Ussd: ')
+    # while user != '*312#':
+    #     print('Invalid USSD code')
+    #     user = input('Ussd: ')
+    
+    if user != '*312#':
+        print('Invalid USSD code, Try again')
+        home()  #recurssive
+         
+    else:
+        dashboard()
+        
+def dashboard():
+    print('Welcome to dashboard')
+    user = input('''
+        1. Buy Data
+        2. Check Balance 
+        #. Exit
+        
+    Choice: ''')
+    if user == '1':
+        buyData()
+    elif user == '2':
+        checkBalance()
+    elif user == '#':
+        exit()
+    else:
+        print('Invalid choice')
+        dashboard()  #recurrsive
+        
+def buyData():
+    print('Welcome to data purchase page')
+    
+def checkBalance():
+    print('Welcome to balance check page')
+
+# home()
+
+
+# Local and Global variable
+
+# val1 = 10
+# val2 = 5
+# val = 0
+
+# def add():
+#     global val
+#     # global val1
+#     # val1 = 2  * val1  # 20 (local variable)
+#     val = 10
+#     print(val1 + val2 + val)
+
+# def sub():
+#     print(val1 - val2 + val)
+
+
+# add() 
+# sub()
+
+
+balance = 0
+
+def dashboard():
+    user = input('''
+         1. withdraw
+         2. Deposit
+         3. check balance        
+    choice: ''')
+    
+    if user == '1':
+        withdraw()
+    elif user == '2':
+        deposit()
+    elif user == '3':
+        checkBalance()
+    else:
+        print('Invalid')
+        dashboard()
+        
+def withdraw():
+    global balance
+    
+    amount= int(input('Amount: '))
+    if balance > amount:
+        balance -= amount
+        
+    dashboard()
+        
+def deposit():
+    global balance
+    
+    amount= int(input('Amount: '))
+    balance += amount
+    
+    dashboard()
+    
+def checkBalance():
+    print(balance)
+
+
+dashboard()
+    
