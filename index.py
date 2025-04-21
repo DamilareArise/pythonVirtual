@@ -820,5 +820,66 @@ def checkBalance():
     print(balance)
 
 
-dashboard()
+# dashboard()
+
+
+# OOP -> Object oriented programming
+
+name = 'John'
+name = str('john')
+# name  
+# class -> A blueprint to creating an object 
+
+class Car:
+    def __init__(self):
+            self.brand = 'Toyota'
+            self.model = 'Venza'
+            self.color = 'red'
     
+    def start(self):
+        print(f'The {self.brand} {self.model} car is starting.')
+
+
+first = Car()
+second = Car()
+
+# print(type(first))
+# print(first.brand)
+# first.start()
+
+# second.brand = 'Benz'
+# print(second.brand)
+# second.start()
+
+class Calc:
+    def __init__(self, val1:float, val2:float):
+        self.value1 = val1
+        self.value2 = val2
+        
+    def dashboard(self):
+        user = input('''
+        1. Add
+        2. Subtract
+        
+        choice: ''')
+        
+        if user == '1':
+            print(f"Result: {self.add()}")
+            
+        elif user == '2':
+            print(f"Result: {self.subtract()}")
+        
+        else:
+            print("Invalid choice, please select again.")
+            self.dashboard()
+    
+    def add(self):
+        return self.value1 + self.value2
+    
+    def subtract(self):
+        return self.value1 - self.value2
+
+
+
+cascio = Calc(2, 4)
+cascio.dashboard()
