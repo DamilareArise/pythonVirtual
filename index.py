@@ -881,5 +881,114 @@ class Calc:
 
 
 
-cascio = Calc(2, 4)
-cascio.dashboard()
+# cascio = Calc(2, 4)
+# cascio.dashboard()
+
+# Inheritance
+
+class Parent:
+    def __init__(self):
+        self.surname = 'Falana'
+        self.firstname = 'Akin'
+        self.skills = ['Coaching', 'Swimming']
+        
+    def intro(self):
+        return f'My name is {self.firstname} {self.surname}.'
+    
+    def getSkills(self):
+        return self.skills
+    
+
+# parent = Parent()
+# print(parent.intro())
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        # or 
+        # Parent.__init__(self)
+        self.firstname = 'Ayomide'
+        self.skills.append('Coding')
+        self.skills.remove('Coaching')
+        
+    def intro(self):
+        return super().intro() + ' I love to code.'
+
+child = Child()
+# print(child.getSkills())
+# print(child.intro())
+
+
+# Modularization
+
+# scripts -> a file that contains a simple python codes
+# Module -> a scripts that has exportable variables, functions or classes
+# library -> Two more modules is library
+# Framework -> combination of libraries
+
+import time, datetime, pwinput, getpass, json, sqlite3
+
+# print('Loading....')
+# time.sleep(5)
+# print('Completed!')
+
+# print(datetime.date.today())
+# print(datetime.datetime.now())
+
+# password = pwinput.pwinput()
+# password = getpass.getpass()
+# print(password)
+
+
+# DATABASE
+# DATABASE MANAGEMENT SYSTEM (DBMS)
+"""
+1. Relational DBMS or SQL(Stuctured query language)
+CRUD -> Create, Read, Update, Delete
+e.g of SQL -> MySql, Oracle, MSQl, PostgreSQL, SQlite
+
+A. Create a database
+B. create a table(rows and Column)
+
+
+2. Non-Ralational DBMS or NoSQl
+e.g MongoDB, Redis
+
+A. Create Cluster
+B Create Database
+C. Create Collection
+D. Create Document
+"""
+# NoSql
+user_collection = [
+    {
+        "name": 'Ade',
+        'age': 23
+    },
+    {
+        "name": 'Ayo',
+        'age': 23
+    }
+]
+
+""""
+SQL
+
+s\n      name       age
+1        Ade         23
+2        Ayo         24
+
+"""
+
+# Table relationships
+'''
+ecommerce_db ->user_table, profile table, product_table, order_table, transaction_table 
+
+# 1. One to one relationship
+user_table and profile_table
+
+
+# 2. one to many relationship
+# 3. many to many relationship
+
+'''
