@@ -7,7 +7,6 @@ li = list(range(10))
 try: 
     # print(li[6])
     x
-    
 except Exception as e:
     print('error: ', e)
     
